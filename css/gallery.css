@@ -1,0 +1,50 @@
+/* -------- Gallery Start -------- */
+main {
+    padding-bottom: 5rem
+}
+
+.galleryHeader {
+    background-image: url(../img/gallery.png)
+}
+
+.galleryArticle {
+    /* height: 200px;
+    width: 100px; */
+    overflow-x: hidden!important
+}
+
+.galleryArticle figure {
+    position: relative;
+}
+
+.galleryArticle .galleryImgMax {
+    height: auto;
+    overflow: hidden
+}
+
+.galleryArticle figcaption p {
+    width: 100%;
+    color: #111;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 44px;
+    border-top: none !important
+}
+.galleryArticle figure:hover p{
+    color: #3eca8e
+} 
+
+/* -------- Gallery End -------- */
+@media screen and (max-width:600px) {
+    #showResults {
+        flex-direction: column !important;
+        align-content: center !important;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    #showResults figure {
+        max-width: 80% !important
+    }
+}

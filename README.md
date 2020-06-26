@@ -1,2 +1,2 @@
 # pixabay-api
-Testing images api from pixabay
+Testing images from pixabay api with AJAX requests

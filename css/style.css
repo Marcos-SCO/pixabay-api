@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #3eca8e
+}
+
+::selection {
+    color: #fff;
+    background: #3eca8e
+}
+
+.lightText,
+label {
+    color: #333
+}
+
+.btn:focus {
+    color: #3eca8e;
+    box-shadow: 0 0 0 0.2rem #3eca8e;
+    background-color: #fff
+}
+
+a {
+    color: #111;
+    ;
+    text-decoration: none;
+    transition: ease-in-out .1s
+}
+
+a:focus {
+    color: #3eca8e !important;
+    background: none !important
+}
+
+a:hover {
+    color: #3eca8e !important;
+    text-decoration: none
+}
+
+.btn:hover {
+    color: #3eca8e !important;
+    border-color: #3eca8e !important;
+    background-color: #fff !important
+}
+
+.form-control:focus {
+    border-color: #3eca8e !important;
+    box-shadow: 0 0 0 0.01rem #3eca8e !important
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    overflow: auto;
+    overflow-x: hidden !important;
+    margin: auto;
+}
+
+@media screen and (max-width:500px) {
+
+    body,
+    main {
+        overflow-x: hidden !important
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px !important;
+        /* Remove scrollbar space */
+        background: transparent !important;
+        /* Optional: just make scrollbar invisible */
+    }
+}
+
+#gallery {
+    position: relative;
+    padding: 1rem;
+    min-height: 412px;
+    margin: auto
+}
+
+img {
+    width: 100%
+}
+
+/* img background areas start */
+.imgBackgroundArea {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    height: 250px;
+    background-position: left, right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff
+}
+
+.imgBackgroundArea::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-image: url(../img/template/logoFaixa.png); */
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+.main {
+    padding-bottom: 0rem;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+/* img background areas end */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer,
+footer address {
+    margin: auto;
+    text-align: center;
+    width: 100%
+}
+
+@media screen and (max-width:800px) {
+    footer {
+        max-width: 231px;
+        margin: auto
+    }
+}
