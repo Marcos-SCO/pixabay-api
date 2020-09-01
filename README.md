@@ -23,6 +23,6 @@ Fazer requisições para uma api, pegar os dados e mostrar para o usuário.
 - [gordao110porcento](https://github.com/Marcos-SCO/gordao110porcento)
 - [marvel-vs-capcom-select-screen](https://github.com/Marcos-SCO/Marvel-vs-Capcom-select-select-screen)
 
-## Redes Sociais ????
+## Redes Sociais 😃
 
 - [Linkedin](https://www.linkedin.com/in/marcos-sco/)
