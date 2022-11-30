@@ -12,6 +12,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- End favicons -->
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- LightBox -->
@@ -23,17 +24,14 @@
     <link rel='stylesheet' href='css/gallery.css'>
     <!-- Main css -->
     <link rel='stylesheet' href='css/style.css'>
-    <title>Pixabay API</title>
+    <title>Pixabay API - By Marcos dos Santos Carvalho</title>
 </head>
 
 <body>
     <header class="galleryHeader imgBackgroundArea">
         <div class="headerContent" style="z-index:9999">
             <span class="d-flex justify-content-between flex-wrap">
-                <h3>Testando</h3><a href="https://pixabay.com/" target="_blank"
-                    style="margin:0px 0px 5px 10px;font-size:12px;line-height:1.7;color:#555;display:block;float:left;padding:9px 12px 6px;border:1px solid #ccc;background:#fff">
-                    <i style="display:block;width:68px;height:18px;overflow:hidden"><img
-                            src="https://pixabay.com/static/img/logo.svg" style="width:94px"></i> Free Images</a>
+                <h3>Testando</h3><a href="https://pixabay.com/" target="_blank" style="margin:0px 0px 5px 10px;font-size:12px;line-height:1.7;color:#555;display:block;float:left;padding:9px 12px 6px;border:1px solid #ccc;background:#fff"><i style="display:block;width:68px;height:18px;overflow:hidden"><img src="https://pixabay.com/static/img/logo.svg" style="width:94px"></i> Free Images</a>
             </span>
             <h1>Pixabay API</h1>
 
@@ -46,27 +44,24 @@
             <header class="pl-3 pr-3 d-flex flex-wrap justify-content-between aling-items-baseline">
                 <h2 class="font-weight-light text-lg-left mt-4 mr-3 mb-0">Pesquise por imagens do Pixabay</h2>
                 <!-- Search form -->
-                <form class="form-inline active-purple-3 active-purple-4"
-                    style="width:100%;max-width: 440px;margin-top: 1.95rem!important;" id="form">
+                <form class="form-inline active-purple-3 active-purple-4" style="width:100%;max-width: 440px;margin-top: 1.95rem!important;" id="form">
                     <label for="search">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </label>
-                    <input class="form-control form-control-m ml-3 w-75" type="text"
-                        placeholder="Digite aqui para encontrar imagens" aria-label="Search" name="search" id="search">
+                    <input class="form-control form-control-m ml-3 w-75" type="text" placeholder="Digite aqui para encontrar imagens" aria-label="Search" name="search" id="search" data-js="search-input">
                 </form>
             </header>
             <hr class="mt-2 mb-5" style="width:40%;">
         </article>
+
+        <section id="showResults" class="row text-center text-lg-left"></section>
     </main>
 
     <footer>
-        <adress class="copyRight d-block footer-copyright text-center py-3" style="position:relative;">© <span
-                id="footerDate">2020</span> Desenvolvido por <a
-                href="https://www.linkedin.com/in/marcos-dos-santos-carvalho-67a51715a/" target="_blank"
-                style="font-weight:bolder">Marcos dos Santos Carvalho</a>
+        <adress class="copyRight d-block footer-copyright text-center py-3" style="position:relative;">© <span id="footerDate" date-value="2020">2020</span> Desenvolvido por <a href="https://www.linkedin.com/in/marcos-dos-santos-carvalho-67a51715a/" target="_blank" style="font-weight:bolder">Marcos dos Santos Carvalho</a>
         </adress>
     </footer>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 
 </html>
