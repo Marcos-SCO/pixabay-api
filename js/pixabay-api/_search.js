@@ -63,10 +63,10 @@ window.searchApi = function searchApi(pageNumParam = 0, searchPerPage = 12) {
         loadMoreBtn(pageNumberValue);
     }, 2000);
 
-    setTimeout(fetchDebounce, 500);
+    fetchDebounce();
 }
 
-// let lastHitsNumber = 0;
+let lastPageNum = 0;
 window.fetchApi = async function fetchApi(pageNumber = 1, searchPerPage = 12) {
 
     const API_KEY = '17209326-870fbc4d237800348a0bc672f';
@@ -75,6 +75,10 @@ window.fetchApi = async function fetchApi(pageNumber = 1, searchPerPage = 12) {
         + "&q=" + encodeURIComponent(search.value)
         + "&per_page=" + searchPerPage
         + '&page=' + pageNumber;
+
+    if (lastPageNum == pageNumber) return;
+
+    lastPageNum = pageNumber;
 
     try {
         let response = await fetch(URL_API);
@@ -85,14 +89,6 @@ window.fetchApi = async function fetchApi(pageNumber = 1, searchPerPage = 12) {
         let totalHits = body.totalHits;
 
         let hitsNumber = (+pageNumber * hits.length);
-
-        console.log(hitsNumber);
-        // console.log('-----------------');
-        // console.log(lastHitsNumber);
-
-        // if (lastHitsNumber == hitsNumber) return;
-
-        // lastHitsNumber = hitsNumber;
 
         if (hitsNumber >= totalHits || pageNumber > 1 && hitsNumber == 0) {
             removeElement('#loadMore');
