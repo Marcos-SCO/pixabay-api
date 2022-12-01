@@ -3,8 +3,6 @@ window.searchKeyDown = function searchKeyDown() {
 
     let $searchInput = document.querySelector('[data-js="search-input"]');
 
-    let timeout = null;
-
     $searchInput.addEventListener('keydown', (e) => {
         let isEnterKeyCode = e.keyCode == enterKeyCode;
 
@@ -13,13 +11,12 @@ window.searchKeyDown = function searchKeyDown() {
             return false;
         }
 
-        clearTimeout(timeout);
-
-        timeout = setTimeout(() => {
+        const debounceKeyDown = debounce(() => {
             emptyHtmlElement('#showResults');
             searchApi(1, 12);
-        }, 1000);
+        }, 1500);
 
+        debounceKeyDown();
     });
 }
 
@@ -53,7 +50,7 @@ window.searchApi = function searchApi(pageNumParam = 0, searchPerPage = 12) {
 
     let pageNumberValue = pageNumParam;
 
-    if (pageNumberValue == 0) {
+    if (pageNumParam == 0) {
 
         let pageNumber = document.querySelector('#loadMore');
 
@@ -61,23 +58,15 @@ window.searchApi = function searchApi(pageNumParam = 0, searchPerPage = 12) {
             +pageNumber.getAttribute('page-number') + 1 : 1;
     }
 
-    function debounce(func, timeout = 300) {
-        let timer;
-        return (...args) => {
-            clearTimeout(timer);
-            timer = setTimeout(() => { func.apply(this, args); }, timeout);
-        };
-    }
-    function saveInput() {
-        console.log('Saving data');
-    }
-    const processChange = debounce(() => saveInput());
+    const fetchDebounce = debounce(() => {
+        fetchApi(pageNumberValue, searchPerPage);
+        loadMoreBtn(pageNumberValue);
+    }, 2000);
 
-
-    // debounce((pageNumberValue, searchPerPage) => fetchApi(pageNumberValue, searchPerPage));
-    // debounce((pageNumberValue) => loadMoreBtn(pageNumberValue));
+    setTimeout(fetchDebounce, 500);
 }
 
+// let lastHitsNumber = 0;
 window.fetchApi = async function fetchApi(pageNumber = 1, searchPerPage = 12) {
 
     const API_KEY = '17209326-870fbc4d237800348a0bc672f';
@@ -96,7 +85,14 @@ window.fetchApi = async function fetchApi(pageNumber = 1, searchPerPage = 12) {
         let totalHits = body.totalHits;
 
         let hitsNumber = (+pageNumber * hits.length);
+
         console.log(hitsNumber);
+        // console.log('-----------------');
+        // console.log(lastHitsNumber);
+
+        // if (lastHitsNumber == hitsNumber) return;
+
+        // lastHitsNumber = hitsNumber;
 
         if (hitsNumber >= totalHits || pageNumber > 1 && hitsNumber == 0) {
             removeElement('#loadMore');

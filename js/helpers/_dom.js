@@ -18,23 +18,10 @@ window.emptyHtmlElement = function emptyHtmlElement(element) {
   $element.innerHTML = '';
 }
 
-// window.debounce = function debounce(func, timeout = 300) {
-//   let timer;
-//   return (...args) => {
-//     clearTimeout(timer);
-//     timer = setTimeout(() => { func.apply(this, args); }, timeout);
-//   };
-// }
-
-window.debounce_leading = function debounce_leading(func, timeout = 300){
+window.debounce = function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
-    if (!timer) {
-      func.apply(this, args);
-    }
     clearTimeout(timer);
-    timer = setTimeout(() => {
-      timer = undefined;
-    }, timeout);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
   };
 }
