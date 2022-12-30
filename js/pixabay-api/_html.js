@@ -61,6 +61,9 @@ window.loadMoreBtn = function loadMoreBtn(pageNumber = 1) {
   $loadMore.setAttribute('page-number', pageNumber);
 
   $loadMore.addEventListener('click', () => {
+    $loadMore.innerText = 'Carregando...';
     searchApi();
+
+    setTimeout(() => $loadMore.innerText = 'Carregar Mais', 3000);
   });
 }
