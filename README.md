@@ -7,6 +7,9 @@ Projeto feito para testar api do Pixabay, utilizando json para pegar os dados.
 - CSS3
 - JAVASCRIPT
 
+## Versão do node usada para rodar npm
+v16.13.0
+
 ## Objetivo 🎯
 
 Fazer requisições para uma api, pegar os dados e mostrar para o usuário.
