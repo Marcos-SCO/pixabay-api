@@ -1,31 +1,31 @@
 # pixabay-api
-Projeto feito para testar api do Pixabay, utilizando json para pegar os dados.
 
-## Tecnologias Utilizadas 🚀
+This project is a simple web application that demonstrates how to interact with the Pixabay API to fetch and display images based on user queries. It uses JavaScript to make HTTP requests and dynamically updates the UI with the results.
 
-- HTML
-- CSS3
-- JAVASCRIPT
+## Technologies Used 🚀
 
-## Versão do node usada para rodar npm
-v16.13.0
+- Html
+- css
+- JavaScript
+- Node.js v16.13.0 
 
-## Objetivo 🎯
+## Project Purpose 🎯
 
-Fazer requisições para uma api, pegar os dados e mostrar para o usuário.
+The main goal of this project was to practice making API requests, handling JSON responses, and displaying data to users in a user-friendly way. Users can search for images, and the app will show relevant results fetched from the Pixabay API.
 
-<a href='https://marcos-sco.github.io/pixabay-api/'>Acesse por aqui</a>
+[Click here to access the live demo](https://marcos-sco.github.io/pixabay-api/)
+
 <p align="left">
   <a href='https://marcos-sco.github.io/pixabay-api/'>
-    <img src="https://github.com/Marcos-SCO/pixabay-api/blob/master/img/gallery.png?raw=true" width="700" title="batman">
+    <img src="https://raw.githubusercontent.com/Marcos-SCO/pixabay-api/refs/heads/master/src/img/gallery.png" width="700" title="Pixabay API Gallery">
   </a>
 </p>
 
-## Outros Projetos 💻
+## Other Projects 💻
 
 - [gordao110porcento](https://github.com/Marcos-SCO/gordao110porcento)
 - [marvel-vs-capcom-select-screen](https://github.com/Marcos-SCO/Marvel-vs-Capcom-select-select-screen)
 
-## Redes Sociais 😃
+## Social Media 😃
 
-- [Linkedin](https://www.linkedin.com/in/marcos-sco/)
+- [LinkedIn](https://www.linkedin.com/in/marcos-sco/)
